@@ -34,8 +34,8 @@ int main(void) {
   // Data structures
 
   // Arrays (continuous blocks of memory)
-  int     static_num_array[5]    = {0, 1, 2, 3, 4};    // statically allocated
-  int     dynamic_num_array[]    = {0, 1, 2, 3, 4};    // dynamically allocated
+  int     static_num_arr[5]    = {0, 1, 2, 3, 4};    // statically allocated
+  int     dynamic_num_arr[]    = {0, 1, 2, 3, 4};    // dynamically allocated
   // Don't get too excited. Arrays of strings are way harder, lol. We can get into that later...
 
   // Strings. All C strings must end with a null byte \0 (0x00). This terminates the string.
@@ -57,11 +57,23 @@ int main(void) {
   printf("integer = %d\n", integer);
   printf("decimal = %f\n", decimal);
   printf("long_decimal = %f\n", long_decimal);
+  printf("single_character = %c\n", single_character);
+
+  // Print arrays....
+  for (int i = 0; i < 5; i++) {
+    printf("static_num_arr[%d] = %d\n", i, static_num_arr[i]);
+  }
+  for (int i = 0; i < 9; i++) {
+    printf("static_char_arr[%d] = %c\n", i, static_char_arr[i]);
+  }
+  printf("static_char_arr = %s\n", static_char_arr);
 
   // We have to return from main() otherwise, we are doomed.
   // 0 indicates success.
   // 1 would indicate failure, which we don't even want to think about. Jk.
   return 0;
+
+  // Holy smokes. You made it past. Level 0 complete haha. Brace yourself for more... lol
 
 }
 
