@@ -34,6 +34,14 @@ int main(void) {
   // Data structures
 
   // Arrays (continuous blocks of memory)
+  // Note: In these contexts, everything is technically "statically" allocated,
+  // meaning that the memory requirements are computed before runtime.
+  // I only said dynamically allocated to reflect the automatic sizing of the second array.
+  // But just keep that in mind.
+  // Normally, "dynamically allocated memory" means memory allocated at runtime.
+  // This means the user can determine memory allocations, and it is not just set at compile time.
+  // Perhaps a better wording would be a "fixed" array for the first example here,
+  // and a "auto" array for the second example.
   int     static_num_arr[5]    = {0, 1, 2, 3, 4};    // statically allocated
   int     dynamic_num_arr[]    = {0, 1, 2, 3, 4};    // dynamically allocated
   // Don't get too excited. Arrays of strings are way harder, lol. We can get into that later...
