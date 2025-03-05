@@ -28,7 +28,7 @@ int main(void) {
   double  long_decimal        = 99.99999;     // 15 digits max
   char    single_character    = 'a';
 
-  // You can also add const before a var to make it read only or "constant".
+  // You can also add const before a var to make it read-only or "constant".
   const int merherh = 5555555;
 
   // Data structures
