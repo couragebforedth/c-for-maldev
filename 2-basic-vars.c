@@ -40,10 +40,10 @@ int main(void) {
   // Arrays (continuous blocks of memory)
 
   // a fixed array
-  int     static_num_arr[5]    = {0, 1, 2, 3, 4};
+  int fixed_num_arr[5]  = {0, 1, 2, 3, 4};
 
-  // a dynamically sized array
-  int     dynamic_num_arr[]    = {0, 1, 2, 3, 4};
+  // an auto sized array
+  int auto_num_arr[]    = {0, 1, 2, 3, 4};
 
   // Don't get too excited.
   // Arrays of strings are way harder, lol.
@@ -53,13 +53,13 @@ int main(void) {
   // with a null byte \0 (0x00). This terminates the string.
 
   // character array, fixed size
-  char    static_char_arr[9]        = "Omg kewl";
+  char fixed_char_arr[9]  = "Omg kewl";
 
-  // character array, dynamically sized
-  char    dynamic_char_arr[]        = "Omg kewl";
+  // character array, auto sized
+  char auto_char_arr[]    = "Omg kewl";
 
   // string literal, stored in read-only memory
-  char   *string_literal            = "Omg kewl";
+  char *string_literal    = "Omg kewl";
 
   // Quick detour before we get too crazy....
   // Let's print some stuff.
@@ -81,12 +81,17 @@ int main(void) {
 
   // Print arrays....
   for (int i = 0; i < 5; i++) {
-    printf("static_num_arr[%d] = %d\n", i, static_num_arr[i]);
+    printf("fixed_num_arr[%d] = %d\n", i, fixed_num_arr[i]);
   }
   for (int i = 0; i < 9; i++) {
-    printf("static_char_arr[%d] = %c\n", i, static_char_arr[i]);
+    printf("fixed_char_arr[%d] = %c\n", i, fixed_char_arr[i]);
   }
-  printf("static_char_arr = %s\n", static_char_arr);
+  printf("fixed_char_arr = %s\n", fixed_char_arr);
+
+  // Print string literal
+  // (Still a character array in memory,
+  // just declared differently.)
+  printf("string_literal = %s\n", string_literal);
 
   // We have to return from main() otherwise, we are doomed.
   // 0 indicates success.
