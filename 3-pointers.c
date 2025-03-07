@@ -19,7 +19,7 @@ int main(void) {
   // & is a reference operator and
   // gets the address of a variable.
 
-  // You'll not that if we print the pointer,
+  // You'll note that if we print the pointer,
   // it will literally print the address of the var.
   printf("pointer = %#018x\n", pointer);
 
