@@ -47,5 +47,7 @@ int main(int argc, char *argv[]) {
   printf("bash_devtcp->id         = %d\n", bash_devtcp->id);
   printf("bash_devtcp->name       = %s\n", bash_devtcp->name);
 
+  free(bash_devtcp);
+
 }
 
