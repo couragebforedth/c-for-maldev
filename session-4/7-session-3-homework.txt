@@ -96,7 +96,7 @@ The following stages take place when you compile a C program.
 
 2.  Compilation
     - Produces the assembly code for your target architecture
-      based on the C sources code from the above step.
+      based on the C source code from the above step.
     - Creates the assembly code to include any
       relevant performance optimization and error checking.
     - Output files have a .s extension.
