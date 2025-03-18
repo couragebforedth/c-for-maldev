@@ -13,6 +13,13 @@ int main(void) {
 
   // Now we'll create a pointer.
   int *pointer = &example;
+
+  // Confirm that the pointer type itself stores
+  // a relevant number of bytes depending
+  // on the target architecture.
+  // E.g., 64-bit (8 byte) vs 32-bit (4 byte)
+  printf("pointer size = %d\n", sizeof(pointer));
+
   // there are two formats you can use:
   // int* pointer or int *pointer.
   // int *pointer is more oldschool.
