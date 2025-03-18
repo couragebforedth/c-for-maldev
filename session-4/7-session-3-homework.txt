@@ -1,29 +1,54 @@
 
+
 Session 3 Homework Notes
 ########################
 
-General File Format Naming
-==========================
 
-ELF: Executable and Linkable Format
------------------------------------
+Contents
+========
+1.  General File Format Naming
+    1.  ELF
+2.  Program Memory Organization
+    1.  Byte Order Definitions
+        1.  LSB
+        2.  MSB
+    2.  Byte Order Examples
+3.  Compile Time versus Runtime
+    1.  Compile Time
+    2.  Runtime
+4.  Compilation Process for C Programs
+    1.  Stages of Compilation
+        1.  Pre-Processing
+        2.  Compilation
+        3.  Assembly
+        4.  Linking
+5.  Stack and Heap Constructs and Variables
+    1.  Stack
+    2.  Heap
+        
+
+1.  General File Format Naming
+==============================
+
+1.  ELF: Executable and Linkable Format
+---------------------------------------
 
 The default binary format on Linux-based systems.
 
-File Memory Organization
-========================
+2.  Program Memory Organization
+===============================
 
-Byte Order Definitions
-----------------------
+1.  Byte Order Definitions
+--------------------------
 
-LSB: Least Significant Byte memory organization (Little Endian)
-The least significant byte is stored at the lowest memory address.
+1.  LSB: Least Significant Byte memory organization (Little Endian)
+    The least significant byte is stored at the lowest memory address.
 
-MSB: Most Significant Byte memory organization (Big Endian)
-The most significant byte is stored at the lowest memory address.
+2.  MSB: Most Significant Byte memory organization (Big Endian)
+    The most significant byte is stored at the lowest memory address.
 
-Byte Order Examples
--------------------
+2.  Byte Order Examples
+-----------------------
 
 For example, the string "root" in LSB and MSB format.
 Memory addresses go from low (0x00) to high (0x04).
@@ -50,66 +75,66 @@ MSB:
 0x01 74
 0x00 00
 
-Compile Time versus Runtime
-===========================
+3.  Compile Time versus Runtime
+===============================
 
-Compile Time
-------------
+1.  Compile Time
+----------------
 
 When the programming code is converted to machine code (binary).
 E.g., When you run gcc.
 
-Runtime
--------
+2.  Runtime
+-----------
 
 When a program is running in memory (after compile time).
 E.g., When you execute the program from a terminal like ./hello-world
 
-C Source Code to Binary File Compilation Process
-================================================
+4.  Compilation Process for C Programs
+======================================
 
-Stages of Compilation
----------------------
+1.  Stages of Compilation
+-------------------------
 
 The following stages take place when you compile a C program.
 
-1. Pre-Processing
-- Removes comments, expands macros, expands include files,
-  performs conditional compilation.
-- Output files have a .i extension.
-- Output files are still readable source code in C.
+1.  Pre-Processing
+    - Removes comments, expands macros, expands include files,
+      performs conditional compilation.
+    - Output files have a .i extension.
+    - Output files are still readable source code in C.
 
-2. Compilation
-- Produces the assembly code for your target architecture
-  based on the C sources code from the above step.
-- Creates the assembly code to include any
-  relevant performance optimization and error checking.
-- Output files have a .s extension.
+2.  Compilation
+    - Produces the assembly code for your target architecture
+      based on the C sources code from the above step.
+    - Creates the assembly code to include any
+      relevant performance optimization and error checking.
+    - Output files have a .s extension.
 
-3. Assembly
-- Object files are produced from the assembly files.
-- These objects files are pure machine code (binary).
-- The files have a .o extension.
+3.  Assembly
+    - Object files are produced from the assembly files.
+    - These objects files are pure machine code (binary).
+    - The files have a .o extension.
 
-4. Linking
-- Other code libraries which your code uses and
-  have already been compiled are linked with
-  your code's object files to produce the final binary file.
-- Additional code is also added to handle
-  when our program starts and ends
-  (such as setting up the environment to pass command-line arguments).
+4.  Linking
+    - Other code libraries which your code uses and
+      have already been compiled are linked with
+      your code's object files to produce the final binary file.
+    - Additional code is also added to handle
+      when our program starts and ends
+      (such as setting up the environment to pass command-line arguments).
 
-Stack and Heap Constructs and Variables
-=======================================
+5.  Stack and Heap Constructs and Variables
+===========================================
 
-Stack
------
+1.  Stack
+---------
 
 Stack stores local variables
 and function call information.
 
-Heap
-----
+2.  Heap
+--------
 
 Heap handles dynamic memory allocation
 for large or long-lived data structures.
