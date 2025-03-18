@@ -51,7 +51,7 @@ The default binary format on Linux-based systems.
 -----------------------
 
 For example, the number 0x12345678 in LSB and MSB format.
-Memory addresses go from low (0x00) to high (0x04).
+Memory addresses go from low (0x00) to high (0x03).
 
 LSB (Little Endian):
 0x03 12
