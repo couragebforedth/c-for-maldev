@@ -50,30 +50,20 @@ The default binary format on Linux-based systems.
 2.  Byte Order Examples
 -----------------------
 
-For example, the string "root" in LSB and MSB format.
+For example, the number 0x12345678 in LSB and MSB format.
 Memory addresses go from low (0x00) to high (0x04).
-ASCII character encoding is used.
 
-Character to ASCII hex translation:
-r = 0x72
-o = 0x6F
-o = 0x6F
-t = 0x74
-0 = 0x00 (null terminator)
+LSB (Little Endian):
+0x03 12
+0x02 34
+0x01 56
+0x00 78
 
-LSB:
-0x04 00
-0x03 74
-0x02 6F
-0x01 6F
-0x00 72
-
-MSB:
-0x04 72
-0x03 6F
-0x02 6F
-0x01 74
-0x00 00
+MSB (Big Endian):
+0x03 78
+0x02 56
+0x01 34
+0x00 12
 
 3.  Compile Time versus Runtime
 ===============================
